@@ -12,7 +12,7 @@ html {
 } 
 
 
-h1:hover{}
+h1 :hover :active
 
 #middestuk {
     width: 1100px;
