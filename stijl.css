@@ -1,5 +1,5 @@
 p, h3 {
-    color:rgb(206, 202, 211);
+    color:black
 }
 
 img {
@@ -7,7 +7,7 @@ img {
 }
 html {
     font-size: 10px;
-    background-color: blanchedalmond;
+    background-color: rgb(150, 134, 112);
     font-family: Raleway;
 } 
 
