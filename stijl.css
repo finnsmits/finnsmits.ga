@@ -60,7 +60,7 @@ html {
 #foto {
     background-image: url(/images/camera.png);
 }
-.half-image {
+.halfimage {
     width: 50%;
     height: 420px;
     background-size: contain;
