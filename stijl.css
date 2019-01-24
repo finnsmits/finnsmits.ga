@@ -81,3 +81,7 @@ html {
 .halfimage:hover h2 {
     display: block;
 }
+
+.middestuk h2 {
+    color: rgb(112, 112, 112);
+}
