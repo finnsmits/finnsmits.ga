@@ -69,8 +69,15 @@ html {
     background-position: center; 
 }
 
-.half-image h2 {
+.halfimage h2 {
     margin-top: 170px;
     display: none;
 }
 
+.halfimage:hover {
+    background-color: rgba(223, 222, 222, 0.582);
+    
+}
+.halfimage:hover h2 {
+    display: block;
+}
