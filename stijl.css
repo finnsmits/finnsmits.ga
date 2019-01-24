@@ -18,10 +18,8 @@ html {
     margin-right: auto;
     background: rgb(243, 243, 243);
     text-align: center;
+    font-size: 50px
 }
 .half-image {
     width: 50%
-}
-.groot{
-    font-size: 50px
 }
