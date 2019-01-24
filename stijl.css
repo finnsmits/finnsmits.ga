@@ -64,9 +64,9 @@ html {
     width: 49%;
     height: 420px;
     background-size: contain;
-    display: inline-block;
     background-repeat: no-repeat;
     background-position: center; 
+    float: left;
 }
 
 .halfimage h2 {
