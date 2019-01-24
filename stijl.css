@@ -61,7 +61,7 @@ html {
     background-image: url(/images/camera.png);
 }
 .halfimage {
-    width: 50%;
+    width: 49%;
     height: 420px;
     background-size: contain;
     display: inline-block;
