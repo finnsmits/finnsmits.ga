@@ -69,7 +69,8 @@ html {
     background-position: center; 
 }
 
-h2 {
+.half-image h2 {
     margin-top: 170px;
     display: none;
 }
+
