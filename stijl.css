@@ -19,6 +19,7 @@ html {
     background: rgb(243, 243, 243);
     text-align: center;
     font-size: 35px;
+    padding-top: 30px
 }
 .half-image {
     width: 50%;
