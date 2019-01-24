@@ -43,7 +43,7 @@ html {
 }
 .info:hover {
     background: rgb(134, 181, 241);
-    color: white;
+    color: rgba(255, 255, 255, 0);
 }
 .btn {
     border: 2px solid black;
