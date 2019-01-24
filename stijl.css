@@ -42,7 +42,7 @@ html {
     font-size: 35px;
 }
 .info:hover {
-    background: #2196F3;
+    background: rgb(134, 181, 241);
     color: white;
 }
 .btn {
