@@ -105,15 +105,3 @@ html {
     font-size: 35px;
 }
 
-.fa:hover {
-    background-color: rgba(169, 169, 169, 0.575)
-}
-
-.fa-facebook {
-    background: #3B5998;
-    color: white;
-}
-
-.fa {
-    width: 10px
-}
