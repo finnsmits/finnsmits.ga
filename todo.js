@@ -16,38 +16,40 @@ function taakToevoegen(taakNaam, isGedaan) {
 function takenLaden() {
     lijst.innerHTML = '';
 
-    taaken.forEach(taak, index => {
-        // LI aanmaken 
-        var nieuweLi = document.createElement("li");
-        if(taak.gedaan) { 
-            nieuweLi.classList.add('checked')
-        }
-        
-        // Label aanmaken
-        var nieuweLabel = document.createElement("label"); 
+    taaken.forEach(taakInladen);
+}
+
+function taakInladen(taak, index) {
+    // LI aanmaken 
+    var nieuweLi = document.createElement("li");
+    if(taak.gedaan) { 
+        nieuweLi.classList.add('checked')
+    }
     
-        // Checkbox aanmaken
-        var nieuweCheckbox = document.createElement("input");
-        nieuweCheckbox.type = 'checkbox';
-        if (taak.gedaan) {
-            nieuweCheckbox.checked = 'checked';
-        }
-        nieuweCheckbox.onchange = function() {
-            taaken[index].gedaan = true;
-            takenLaden();
-        }
+    // Label aanmaken
+    var nieuweLabel = document.createElement("label"); 
+
+    // Checkbox aanmaken
+    var nieuweCheckbox = document.createElement("input");
+    nieuweCheckbox.type = 'checkbox';
+    if (taak.gedaan) {
+        nieuweCheckbox.checked = 'checked';
+    }
+    nieuweCheckbox.onchange = function() {
+        taaken[index].gedaan = true;
+        takenLaden();
+    }
+
+    // Taak tekst aanmaken
+    nieuweTekst = document.createTextNode(taak.taak);
+
+    // Checkbox en tekst toevoegen aan de label
+    nieuweLabel.appendChild(nieuweCheckbox);
+    nieuweLabel.appendChild(nieuweTekst);
+
+    // Label toevoegen aan de LI
+    nieuweLi.appendChild(nieuweLabel);
     
-        // Taak tekst aanmaken
-        nieuweTekst = document.createTextNode(taak.taak);
-    
-        // Checkbox en tekst toevoegen aan de label
-        nieuweLabel.appendChild(nieuweCheckbox);
-        nieuweLabel.appendChild(nieuweTekst);
-    
-        // Label toevoegen aan de LI
-        nieuweLi.appendChild(nieuweLabel);
-        
-        // LI toevoegen aan de UL
-        lijst.appendChild(nieuweLi)
-    });
+    // LI toevoegen aan de UL
+    lijst.appendChild(nieuweLi)
 }
