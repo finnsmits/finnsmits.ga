@@ -108,6 +108,9 @@ html {
 }
 
 #calc {
-
+     background-image: url(/images/Calculator-2478633_960_720.png);
 }
 
+#weer {
+    background-image: url(/images/07-Weather.png);
+}
