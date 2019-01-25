@@ -1,1 +1,1 @@
-alert("welkom op mijn site");
+alert("welkom op mijn site klik op oke om door te gaan naar mijn site");
