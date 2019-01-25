@@ -1,2 +1,1 @@
-alert
-("welkom op mijn site")
+alert("welkom op mijn site");
