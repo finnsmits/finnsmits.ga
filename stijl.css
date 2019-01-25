@@ -114,3 +114,7 @@ html {
 #weer {
     background-image: url(/images/07-Weather.png);
 }
+
+.clearfix {
+    clear: both;
+}
