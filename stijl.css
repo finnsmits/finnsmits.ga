@@ -106,6 +106,15 @@ html {
     text-align: center;
     font-size: 35px;
 }
+#tomid {
+    width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgb(243, 243, 243);
+    text-align: center;
+    font-size: 35px;
+
+}
 
 #calc {
      background-image: url(/images/Calculator-2478633_960_720.png);
