@@ -16,7 +16,7 @@ function taakToevoegen(taakNaam, isGedaan) {
 function takenLaden() {
     lijst.innerHTML = '';
 
-    taaken.forEach(taak => {
+    taaken.forEach(taak, index => {
         // LI aanmaken 
         var nieuweLi = document.createElement("li");
         if(taak.gedaan) { 
@@ -31,6 +31,10 @@ function takenLaden() {
         nieuweCheckbox.type = 'checkbox';
         if (taak.gedaan) {
             nieuweCheckbox.checked = 'checked';
+        }
+        nieuweCheckbox.onchange = function() {
+            taaken[index].gedaan = true;
+            takenLaden();
         }
     
         // Taak tekst aanmaken
