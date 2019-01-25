@@ -7,6 +7,7 @@ var taken;
 var takenUitLocalStorage = localStorage.getItem('takenLijst');
 if(takenUitLocalStorage){
     taken = JSON.parse(takenUitLocalStorage);
+    taakInladen()
 }
 else{
     taken = [];
