@@ -24,7 +24,8 @@
                         <input type="button" value="/" onClick="document.calculator.ans.value+='/'">
                         <input type="button" value="0" onClick="document.calculator.ans.value+='0'">
                         <input type="reset" value="Reset">
-                        <input type="button" value="=" onClick="document.calculator.ans.value=eval(docu
+                        <input type="button" value="=" onClick="document.calculator.ans.value=eval(document.calculator.ans.value)">
+                        <br>Het antwoord is<input type="textfield" name="ans" value="">
                 <a href="/"><button class="btn info">terug</button></a>
 </body>
 </html>
