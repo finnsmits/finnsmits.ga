@@ -1,12 +1,12 @@
 var knop = document.querySelector('#todoadd');
 var invoerveld = document.querySelector('#taakv');
 var lijst = document.querySelector('#taaklijst');
+var taaken = [];
 
 knop.onclick = function () {
-    alert('nieuwe taak: ' + invoerveld.value)
+    taakToevoegen(invoerveld.value, false);
 }
 
-var taaken = [];
 
 function taakToevoegen(taakNaam, isGedaan) {
     taaken.push({ taak: taakNaam, gedaan: isGedaan });
