@@ -6,10 +6,7 @@ knop.onclick = function () {
     alert('nieuwe taak: ' + invoerveld.value)
 }
 
-var taaken = [
-    { taak: 'Stofzuigen', gedaan: false },
-    { taak: 'Vaat', gedaan: true }
-];
+var taaken = [];
 
 function taakToevoegen(taakNaam, isGedaan) {
     taaken.push({ taak: taakNaam, gedaan: isGedaan });
