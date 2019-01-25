@@ -1,4 +1,4 @@
 .checked {
-    color: gray;
+    color: rgba(128, 128, 128, 0.794);
     text-decoration: line-through;
 }
