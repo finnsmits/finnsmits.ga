@@ -11,31 +11,42 @@ var taaken = [
     { taak: 'Vaat', gedaan: true }
 ];
 
+function taakToevoegen(taakNaam, isGedaan) {
+    taaken.push({ taak: taakNaam, gedaan: isGedaan });
+    takenLaden();
+}
 
-taaken.forEach(taak => {
-    // LI aanmaken 
-    var nieuweLi = document.createElement("li"); 
+function takenLaden() {
+    lijst.innerHTML = '';
+
+    taaken.forEach(taak => {
+        // LI aanmaken 
+        var nieuweLi = document.createElement("li");
+        if(taak.gedaan) { 
+            nieuweLi.classList.add('checked')
+        }
+        
+        // Label aanmaken
+        var nieuweLabel = document.createElement("label"); 
     
-    // Label aanmaken
-    var nieuweLabel = document.createElement("label"); 
-
-    // Checkbox aanmaken
-    var nieuweCheckbox = document.createElement("input");
-    nieuweCheckbox.type = 'checkbox';
-    if (taak.gedaan) {
-        nieuweCheckbox.checked = 'checked';
-    }
-
-    // Taak tekst aanmaken
-    nieuweTekst = document.createTextNode(taak.taak);
-
-    // Checkbox en tekst toevoegen aan de label
-    nieuweLabel.appendChild(nieuweCheckbox);
-    nieuweLabel.appendChild(nieuweTekst);
-
-    // Label toevoegen aan de LI
-    nieuweLi.appendChild(nieuweLabel);
+        // Checkbox aanmaken
+        var nieuweCheckbox = document.createElement("input");
+        nieuweCheckbox.type = 'checkbox';
+        if (taak.gedaan) {
+            nieuweCheckbox.checked = 'checked';
+        }
     
-    // LI toevoegen aan de UL
-    lijst.appendChild(nieuweLi)
-});
+        // Taak tekst aanmaken
+        nieuweTekst = document.createTextNode(taak.taak);
+    
+        // Checkbox en tekst toevoegen aan de label
+        nieuweLabel.appendChild(nieuweCheckbox);
+        nieuweLabel.appendChild(nieuweTekst);
+    
+        // Label toevoegen aan de LI
+        nieuweLi.appendChild(nieuweLabel);
+        
+        // LI toevoegen aan de UL
+        lijst.appendChild(nieuweLi)
+    });
+}
