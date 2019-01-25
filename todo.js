@@ -2,7 +2,7 @@ var knop = document.querySelector('#todoadd');
 var invoerveld = document.querySelector('#taakv');
 var lijst = document.querySelector('#taaklijst');
 
-var taaken;
+var taken;
 
 var takenUitLocalStorage = localStorage.getItem('takenLijst');
 if(takenUitLocalStorage){
@@ -17,7 +17,7 @@ knop.onclick = function () {
 }
 
 function taakToevoegen(taakNaam, isGedaan) {
-    taaken.push({ taak: taakNaam, gedaan: isGedaan });
+    taken.push({ taak: taakNaam, gedaan: isGedaan });
     takenLaden();
 }
 
@@ -26,10 +26,10 @@ function takenLaden() {
     lijst.innerHTML = '';
 
     // Voor elke taak: taakInladen()
-    taaken.forEach(taakInladen);
+    taken.forEach(taakInladen);
 
     // Opslaan in localStorage
-    localStorage.setItem('takenLijst', JSON.stringify(taaken));
+    localStorage.setItem('takenLijst', JSON.stringify(taken));
 }
 
 function taakInladen(taak, index) {
@@ -49,7 +49,7 @@ function taakInladen(taak, index) {
         nieuweCheckbox.checked = 'checked';
     }
     nieuweCheckbox.onchange = function() {
-        taaken[index].gedaan = true;
+        taken[index].gedaan = true;
         takenLaden();
     }
 
